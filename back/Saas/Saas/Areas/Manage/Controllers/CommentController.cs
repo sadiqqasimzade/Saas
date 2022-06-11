@@ -86,11 +86,11 @@ namespace Saas.Areas.Manage.Controllers
             dbcomment.Name = comment.Name;
             dbcomment.Desc = comment.Desc;
             
-            if(comment.File!=null&&comment.File.Length<Consts.CommentImgSizeKb && comment.File.ContentType.Contains("image"))
+            if(comment.File!=null&&comment.File.Length/1024<Consts.CommentImgSizeKb && comment.File.ContentType.Contains("image"))
             {
                 if (System.IO.File.Exists(Path.Combine(Consts.CommentImgPath, dbcomment.Img)))
                     System.IO.File.Delete(Path.Combine(Consts.CommentImgPath, dbcomment.Img));
-                string filename = Guid.NewGuid().ToString() + comment.Name;
+                string filename = Guid.NewGuid().ToString() + comment.File.FileName;
                 if (filename.Length > Consts.CommentImgNameLength)
                     filename = filename.Substring(filename.Length - Consts.CommentImgNameLength, Consts.CommentImgNameLength);
                 using (FileStream fs = new FileStream(Path.Combine(Consts.CommentImgPath, filename), FileMode.Create))

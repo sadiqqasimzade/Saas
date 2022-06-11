@@ -8,7 +8,7 @@
             <div class="container d-flex justify-content-center gap-5">
                 <div class="">
                     <h1 class="fs-1 fw-bold text-white mt-5">Launch Your SaaS Website in Minutes!</h1>
-                    <p class="fs-4 text-white" class="mt-5">
+                    <p class="fs-4 text-white mt-5">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
                         voluptua.
@@ -16,7 +16,7 @@
                     <button class="btn btn-outline-light rounded-pill fs-3 mt-5 fw-semibold">Get started</button>
                 </div>
                 <div>
-                    <img style="width: 80vh; " src="./assets/imgs/hero-img.png" alt="">
+                    <img  " src="./assets/imgs/hero-img.png" alt="">
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
     <section class="container">
         <div class="d-flex mt-5 justify-content-center align-items-center gap-5">
             <div class="">
-                <img src="./assets/imgs/about-1.png" alt="">
+                <img src="./assets/imgs/about-1.png" class="w-100" alt="">
                 <img class="left-img1 w-25 text-primary" src="./assets/imgs/about-left-shape.svg" alt="">
                 <img class="left-img2 w-25 text-primary" src="./assets/imgs/right-dots.svg" alt="">
             </div>
@@ -101,7 +101,7 @@
                 <button class="btn btn-outline-primary rounded-pill fs-3 mt-5 fw-semibold">Discover More</button>
             </div>
             <div class="">
-                <img src="./assets/imgs/about-1.png" alt="">
+                <img src="./assets/imgs/about-2.png" class="w-100" alt="">
                 <img class="right-img1 w-25" src="./assets/imgs/about-right-shape.svg" alt="">
                 <img class="right-img2 w-25" src="./assets/imgs/left-dots.svg" alt="">
             </div>
@@ -194,8 +194,7 @@
             </div>
             <div>
                 <span class="d-flex justify-content-center rounded-pill gap-5"><button class="btn btn-light">Montly</button><button class="btn rounded-pill btn-primary">Yearly</button></span>
-                <div class="d-flex flex-wrap justify-content-center gap-5 mt-5">
-
+                <div class="d-flex flex-wrap justify-content-center flex-wrap gap-5 mt-5">
                     <div class="card h-100 text-center w-25 shadow-sm p-3 mb-5 bg-white rounded">
                         <p class="fw-bold text-primary fs-2 text-center mt-2">$36</p>
                         <p class="fw-semibold fs-4 text-center">Basic Account </p>
@@ -247,35 +246,38 @@
 
     <section class="mt-5 container">
         <div class="container">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
+            <div id="carouselExampleIndicators" class="carousel slide bg-secondary" data-bs-ride="carousel">
+                <div class="carousel-indicators d-flex justify-content-center">
                     @for (int i = 0; i < Model.Count; i++)
                     {
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@i" class="active" aria-current="true" aria-label="Slide @i"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@i" class="@(i==0?"active":"")" aria-current="true" aria-label="Slide @i"></button>
                     }
                 </div>
-                @foreach (var item in Model)
-                {
-                    <div class="carousel-inner">
-                        <div class="carousel-item  active">
+           
+                    <div class="carousel-inner d-flex justify-content-center  ">
+                        @for (var i = 0; i < Model.Count; i++)
+                        {
+                                  <div class="carousel-item  @(i==0?"active":"")">
                             <div class="card" style="width: 18rem;">
-                                <img src="./assets/imgs/@item.Img" class="card-img-top" alt="...">
+                                <img src="./assets/imgs/comments/@Model[i].Img" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="card-text">@item.Desc</p>
-                                    <p class="card-text">@item.Name</p>
+                                    <p class="card-text">@Model[i].Desc</p>
+                                    <p class="card-text">@Model[i].Name</p>
                                 </div>
                             </div>
                         </div>
+                        }
+                  
                     </div>
-                }
+                
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden text-primary">Next</span>
                 </button>
             </div>
         </div>

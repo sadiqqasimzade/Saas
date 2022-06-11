@@ -8625,24 +8625,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tu6w5xs1c\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tu6w5xs1c\\Desktop\\sass\\back\\Saas\\Saas\\Saas.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\git\\all\\Saas\\back\\Saas\\Saas\\Saas.csproj",
       "projectName": "Saas",
-      "projectPath": "C:\\Users\\tu6w5xs1c\\Desktop\\sass\\back\\Saas\\Saas\\Saas.csproj",
-      "packagesPath": "C:\\Users\\tu6w5xs1c\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tu6w5xs1c\\Desktop\\sass\\back\\Saas\\Saas\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\git\\all\\Saas\\back\\Saas\\Saas\\Saas.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\git\\all\\Saas\\back\\Saas\\Saas\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\tu6w5xs1c\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8709,7 +8704,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
